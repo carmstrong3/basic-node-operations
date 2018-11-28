@@ -1,0 +1,32 @@
+##### Questions
+
+> Run the commands sort, wc and uniq on the commands.js file. Explain how they work and what the output was.
+
+
+
+> Using the pipe (|) connect at least two commands and run it on commands.js. Explain what the output was and why the specific data was outputted.
+
+The command `sort commands.js | wc` output `76  164 1804 commands.js`
+
+This output makes sense because it is the same output as `wc commands.js`. The sort command re-orders the file but does not change the content, so the count should remain the same.
+
+
+> Given a string, reverse the order of characters in each word within a sentence while maintaining the original word order and whitespace and return the string. To improve your problem-solving experience, use the suggested functions to solve the problem. 
+
+const reverseString = (string) => {
+// initialize returned string
+  let reversedString = [];
+// split original string
+  let s = string.split(" ");
+// iterate over strings
+  for(let i = 0; i < s.length; i++){
+    console.log("before: " + s[i].split("").reverse().join(""));
+    reversedString.push(s[i].split("").reverse().join(""));
+  };
+// return joined string
+  return reversedString.join(" ");
+}
+// Test case 
+reverseString("Hello There Young Man");
+
+
